@@ -14,12 +14,25 @@ const HomePage: React.FC = () => {
                     <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
                         <div className="p-6 text-center">
                             <h2 className="text-2xl font-bold font-roboto-slab text-gray-700">IB DP Computer Science</h2>
-                            <p className="text-gray-600 mt-2 mb-4">Syllabus and Assessment Outline</p>
+                            <p className="text-gray-600 mt-2 mb-4">Syllabus & Assessment Outline</p>
                             <Link
                                 to="/ib-dp-cs"
                                 className="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors"
                             >
                                 View Poster
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <div className="p-6 text-center">
+                            <h2 className="text-2xl font-bold font-roboto-slab text-gray-700">IB Command Terms</h2>
+                            <p className="text-gray-600 mt-2 mb-4">Definitions for DP and MYP</p>
+                            <Link
+                                to="/command-terms"
+                                className="inline-block bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700 transition-colors"
+                            >
+                                View Posters
                             </Link>
                         </div>
                     </div>
