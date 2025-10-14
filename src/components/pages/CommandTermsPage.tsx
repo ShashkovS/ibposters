@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CommandTermPoster from '../posters/command-terms/CommandTermPoster';
+import TwoTermsPoster from '../posters/command-terms/TwoTermsPoster';
 import { commandTermsData } from '../../data/commandTerms';
 
 const BackIcon = () => (
@@ -20,6 +20,12 @@ const CommandTermsPage: React.FC = () => {
         window.print();
     };
 
+    // Group terms into pairs for printing
+    const termPairs = [];
+    for (let i = 0; i < commandTermsData.length; i += 2) {
+        termPairs.push([commandTermsData[i], commandTermsData[i + 1] || null]);
+    }
+
     return (
         <div className="bg-gray-100 min-h-screen">
             <div className="p-4 bg-white shadow-md no-print flex justify-between items-center sticky top-0 z-10">
@@ -38,8 +44,8 @@ const CommandTermsPage: React.FC = () => {
             </div>
 
             <div className="p-4 sm:p-8 flex flex-col items-center">
-                {commandTermsData.map((term) => (
-                    <CommandTermPoster key={term.term} termData={term} />
+                {termPairs.map((pair, index) => (
+                    <TwoTermsPoster key={index} termPair={pair} />
                 ))}
             </div>
         </div>

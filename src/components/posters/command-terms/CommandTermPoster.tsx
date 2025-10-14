@@ -23,37 +23,33 @@ const CommandTermPoster: React.FC<CommandTermPosterProps> = ({ termData }) => {
     const { term, formalDefinition, studentDefinition, colorScheme } = termData;
 
     return (
-        <div className="printable-poster flex flex-col bg-white w-[42cm] min-h-[29.7cm] shadow-lg mb-8 page-break-after: always print:shadow-none print:mb-0">
+        <div className="flex flex-col flex-grow p-8 print:p-4">
             {/* Header Section */}
-            <div className={`p-8 text-white ${colorScheme.primary}`}>
-                <h1 className="text-8xl font-extrabold font-roboto-slab">{term}</h1>
+            <div className={`p-4 rounded-t-lg text-white ${colorScheme.primary}`}>
+                <h1 className="text-7xl font-extrabold font-roboto-slab">{term}</h1>
             </div>
 
             {/* Body Section */}
-            <div className="flex-grow grid grid-cols-2 gap-8 p-8">
+            <div className="flex-grow grid grid-cols-2 gap-6 pt-6">
                 {/* Formal Definition */}
-                <div className={`p-6 rounded-lg ${colorScheme.secondary}`}>
-                    <div className="flex items-center mb-4">
-                        <InfoIcon className={`w-10 h-10 mr-4 ${colorScheme.text}`} />
-                        <h2 className={`text-3xl font-bold font-roboto-slab ${colorScheme.text}`}>Formal Definition</h2>
+                <div >
+                    <div className="flex items-center mb-3">
+                        <InfoIcon className={`w-8 h-8 mr-3 flex-shrink-0 ${colorScheme.text}`} />
+                        <h2 className={`text-5xl font-bold font-roboto-slab ${colorScheme.text}`}>Formal Definition</h2>
                     </div>
-                    <p className="text-2xl text-gray-800 leading-relaxed font-sans">{formalDefinition}</p>
+                    <p className="text-4xl text-gray-700 leading-relaxed font-sans">{formalDefinition}</p>
                 </div>
 
                 {/* Student Definition */}
-                <div className={`p-6 rounded-lg ${colorScheme.secondary}`}>
-                    <div className="flex items-center mb-4">
-                        <StudentIcon className={`w-10 h-10 mr-4 ${colorScheme.text}`} />
-                        <h2 className={`text-3xl font-bold font-roboto-slab ${colorScheme.text}`}>In Simple Terms...</h2>
+                <div >
+                    <div className="flex items-center mb-3">
+                        <StudentIcon className={`w-8 h-8 mr-3 flex-shrink-0 ${colorScheme.text}`} />
+                        <h2 className={`text-5xl font-bold font-roboto-slab ${colorScheme.text}`}>In Simple Terms...</h2>
                     </div>
-                    <p className="text-2xl text-gray-800 leading-relaxed font-sans">{studentDefinition}</p>
+                    <p className="text-4xl text-gray-700 leading-relaxed font-sans">{studentDefinition}</p>
                 </div>
             </div>
 
-            {/* Footer Section */}
-            <footer className="p-4 text-center text-sm text-gray-600 border-t-2 border-gray-200">
-                The Island School | Computer Science & Design Department
-            </footer>
         </div>
     );
 };
