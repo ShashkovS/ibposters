@@ -48,14 +48,20 @@ body {
     size: A3;
     margin: 1cm;
   }
-  body {
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    background-color: #ffffff;
   }
+
   .no-print {
     display: none !important;
   }
+
   .printable-poster {
     width: 100% !important;
     height: 100% !important;
@@ -66,6 +72,7 @@ body {
     box-shadow: none !important;
     transform: scale(1) !important;
   }
+
   .page-break {
     page-break-before: always;
   }
