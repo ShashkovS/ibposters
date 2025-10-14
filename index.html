@@ -1,40 +1,82 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/webstorm-icon-logo.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WS playground</title>
-  <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IB CS & Design Posters</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            src: url('https://leaders.tech/fonts/Roboto-Regular.ttf') format('truetype');
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('https://leaders.tech/fonts/Roboto-Bold.ttf') format('truetype');
+            font-weight: 700;
+        }
+
+        @font-face {
+            font-family: 'Roboto Slab';
+            src: url('https://leaders.tech/fonts/Roboto_Slab/RobotoSlab-Regular.ttf') format('truetype');
+            font-weight: 400;
+        }
+        
+        @font-face {
+            font-family: 'Inter';
+            src: url('https://leaders.tech/fonts/Inter_18pt-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9fafb; /* bg-gray-50 */
+        }
+
+        @media print {
+            @page {
+                size: A3;
+                margin: 1cm;
+            }
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background-color: #ffffff;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .printable-poster {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                border: none !important;
+                box-shadow: none !important;
+                transform: scale(1);
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
 </head>
 <body>
-<header class="logo">
-  <a href="https://www.jetbrains.com/webstorm/">
-    <img src="/webstorm-logo.svg" alt="WebStorm logo" width="344"
-         height="90">
-  </a>
-</header>
-<main id="app">
-  <h1 class="title">
-    Thank you for trying it out. <br /> Your first project is up and running
-    now.
-  </h1>
-  <section class="counter">
-    <div class="counter-info">
-      <p class="counter-text">Counter is</p>
-      <p class="counter-value" id="counter-value"></p>
-    </div>
-    <div class="counter-interaction">
-      <button id="increaseByOne" type="button">+1</button>
-      <button id="increaseByTwo" type="button">+2</button>
-      <button id="decreaseByOne" type="button">-1</button>
-      <button id="decreaseByTwo" type="button">-2</button>
-    </div>
-  </section>
-</main>
-<footer class="technologies">
-  <img src="/technologies.svg" alt="List of supported technologies">
-</footer>
-<script type="module" src="/src/main.ts"></script>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>
