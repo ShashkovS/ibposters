@@ -1,15 +1,14 @@
-
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './components/HomePage';
-import IbDpCsPoster from './components/IbDpCsPoster';
+import HomePage from '@/src/components/pages/HomePage.tsx';
+import IbDpCsPage from '@/src/components/pages/IbDpCsPage.tsx';
 
 const App: React.FC = () => {
     return (
         <HashRouter>
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/ib-dp-cs-poster" element={<IbDpCsPoster />} />
+                <Route path="/ib-dp-cs" element={<IbDpCsPage />} />
             </Routes>
         </HashRouter>
     );
