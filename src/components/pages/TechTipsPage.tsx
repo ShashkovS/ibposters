@@ -47,7 +47,7 @@ const TechTipsPage: React.FC = () => {
 
             <div className="p-4 sm:p-8 flex flex-col items-center gap-y-8">
                 {techTipsData.map((data) => (
-                    <div key={data.title} className="page-break-after:always print:mb-0">
+                    <div key={data.title} className="page-break-after:always print:mb-0 page-break">
                         <TechTipPoster data={data} />
                     </div>
                 ))}

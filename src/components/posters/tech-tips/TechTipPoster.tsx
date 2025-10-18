@@ -16,7 +16,7 @@ const TechTipPoster: React.FC<TechTipPosterProps> = ({ data }) => {
     };
 
     return (
-        <div className="printable-poster flex flex-col bg-white w-[29.7cm] min-h-[42cm] shadow-lg print:shadow-none">
+        <div className="printable-poster flex flex-col bg-white w-[29.7cm] min-h-[42cm] shadow-lg print:shadow-none page-break">
             {/* Header */}
             <header className={`p-8 ${colorScheme.headerBg} ${colorScheme.headerText}`}>
                 <h1 className="text-7xl font-extrabold font-roboto-slab">{title}</h1>
@@ -28,10 +28,10 @@ const TechTipPoster: React.FC<TechTipPosterProps> = ({ data }) => {
                 <div className={`grid grid-cols-2 gap-x-10 gap-y-6 h-full ${gridRowsClass()}`}>
                     {tips.map((tip) => (
                         <div key={tip.name} className="flex flex-col">
-                            <h3 className={`text-3xl font-bold font-roboto-slab ${colorScheme.accentText}`}>{tip.name}</h3>
+                            <h3 className={`text-4xl font-bold font-roboto-slab ${colorScheme.accentText}`}>{tip.name}</h3>
                             <p className="text-2xl text-gray-600 mt-2 flex-grow">{tip.description}</p>
-                            <div className="mt-3">
-                                <code className={`px-4 py-2 rounded-md text-2xl font-semibold ${colorScheme.shortcutBg} ${colorScheme.shortcutText}`}>
+                            <div className="mt-2">
+                                <code className={`px-4 py-2 rounded-md text-3xl font-semibold ${colorScheme.shortcutBg} ${colorScheme.shortcutText}`}>
                                     {tip.shortcut}
                                 </code>
                             </div>

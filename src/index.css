@@ -38,15 +38,31 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: 'Cascadia Mono';
+  src: url('https://mathsolverbot.shashkovs.ru/static/fonts/CascadiaMono-Light.woff2') format('woff2'),
+  url('https://mathsolverbot.shashkovs.ru/static/fonts/CascadiaMono-Light.woff2') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+code, pre {
+  font-family: "Cascadia Mono", monospace !important;
+}
+
 body {
-  font-family: 'Roboto', 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #f9fafb; /* bg-gray-50 */
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Roboto Slab', sans-serif;
 }
 
 @media print {
   /* Default A3 Landscape for Command Terms */
   @page {
-    size: A3 landscape;
+    size: A3 portrait;
     margin: 1cm;
   }
 
