@@ -23,7 +23,7 @@ const CommandTermPoster: React.FC<CommandTermPosterProps> = ({ termData }) => {
     const { term, formalDefinition, studentDefinition, colorScheme } = termData;
 
     return (
-        <div className="flex flex-col flex-grow p-8 print:p-4">
+        <div className="flex flex-col flex-grow p-8 print:p-4 min-h-[40vh]">
             {/* Header Section */}
             <div className={`p-4 rounded-t-lg text-white ${colorScheme.primary}`}>
                 <h1 className="text-7xl font-extrabold font-roboto-slab">{term}</h1>

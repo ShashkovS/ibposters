@@ -74,6 +74,6 @@ body {
   }
 
   .page-break {
-    page-break-before: always;
+    break-after: page;
   }
 }

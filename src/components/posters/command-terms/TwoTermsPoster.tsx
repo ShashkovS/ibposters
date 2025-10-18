@@ -30,7 +30,6 @@ const TwoTermsPoster: React.FC<TwoTermsPosterProps> = ({ termPair }) => {
             <footer className="mt-auto pt-4 text-center text-xs text-gray-500 mb-4">
                 The Island School | Computer Science & Design Department
             </footer>
-            <div className="page-break"></div>
         </div>
     );
 };
