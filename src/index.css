@@ -44,9 +44,17 @@ body {
 }
 
 @media print {
+  /* Default A3 Landscape for Command Terms */
   @page {
     size: A3 landscape;
     margin: 1cm;
+  }
+
+  /* Override for A3 Portrait */
+  body.print-a3-portrait {
+    @page {
+      size: A3 portrait;
+    }
   }
 
   html, body {

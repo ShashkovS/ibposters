@@ -37,9 +37,19 @@ const HomePage: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow-lg flex items-center justify-center border-2 border-dashed border-gray-300 p-6">
-                        <p className="text-gray-500 text-center">More posters coming soon...</p>
+                    <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <div className="p-6 text-center">
+                            <h2 className="text-2xl font-bold font-roboto-slab text-gray-700">Tech Productivity Tips</h2>
+                            <p className="text-gray-600 mt-2 mb-4">macOS & Terminal Shortcuts</p>
+                            <Link
+                                to="/tech-tips"
+                                className="inline-block bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-700 transition-colors"
+                            >
+                                View Posters
+                            </Link>
+                        </div>
                     </div>
+
                 </div>
             </main>
             <footer className="mt-12 text-center text-gray-500 text-sm">
