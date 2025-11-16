@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>macOS Keyboard Shortcuts - Essential Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @page {
+            size: A3 portrait;
+            margin: 0;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 297mm;
+            height: 420mm;
+            padding: 15mm;
+            color: #1a1a1a;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 40px;
+            height: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid #667eea;
+        }
+        
+        .header h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #667eea;
+            margin-bottom: 8px;
+            letter-spacing: -1px;
+        }
+        
+        .header p {
+            font-size: 20px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .shortcuts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .shortcut-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            border-radius: 12px;
+            padding: 18px 22px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s;
+        }
+        
+        .shortcut-card:nth-child(2n) {
+            border-left-color: #764ba2;
+        }
+        
+        .shortcut-card:nth-child(3n) {
+            border-left-color: #f093fb;
+        }
+        
+        .shortcut-card:nth-child(4n) {
+            border-left-color: #4facfe;
+        }
+        
+        .shortcut-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .icon {
+            font-size: 24px;
+        }
+        
+        .keys-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        
+        .key {
+            background: white;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            color: #667eea;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 
+                        0 4px 0 rgba(102, 126, 234, 0.2);
+            display: inline-block;
+            border: 2px solid #667eea;
+            min-width: 40px;
+            text-align: center;
+        }
+        
+        .plus {
+            font-size: 18px;
+            font-weight: 700;
+            color: #999;
+        }
+        
+        .or {
+            font-size: 14px;
+            font-weight: 600;
+            color: #999;
+            margin: 0 4px;
+        }
+        
+        .description {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 3px solid #e8ecf1;
+        }
+        
+        .footer p {
+            font-size: 16px;
+            color: #999;
+            font-weight: 500;
+        }
+        
+        .keyboard-legend {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+        .legend-key {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+        
+        @media print {
+            body {
+                width: 297mm;
+                height: 420mm;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⌨️ macOS Shortcuts</h1>
+            <p>Essential keyboard shortcuts for productivity</p>
+        </div>
+        
+        <div class="shortcuts-grid">
+            <!-- Switch Apps -->
+            <div class="shortcut-card">
+                <div class="shortcut-title">
+                    <span class="icon">🔄</span>
+                    Switch Apps
+                </div>
+                <div class="keys-container">
+                    <span class="key">⌘</span>
+                    <span class="plus">+</span>
+                    <span class="key">Tab</span>
+                </div>
+                <div class="description">Cycle through open applications</div>
+                <div class="keys-container" style="margin-top: 8px;">
+                    <span class="key">⌘</span>
+                    <span class="plus">+</span>
+                    <span class="key">`</span>
+                </div>
+                <div class="description">Switch windows of same app</div>
+            </div>
+            
+            <!-- Spotlight Search -->
+            <div class="shortcut-card">
+                <div class="shortcut-title">
+                    <span class="icon">🔍</span>
+                    Spotlight Search
+                </div>
+                <div class="keys-container">
+                    <span class="key">⌘</span>
+                    <span class="plus">+</span>
+                    <span class="key">Space</span>
+                </div>
+                <div class="description">Quickly find apps, files, or folders</div>
+            </div>
+            
+            <!-- Go to Folder -->
+            <div class="shortcut-card">
+                <div class="shortcut-title">
+                    <span class="icon">📁</span>
+                    Go to Folder
+                </div>
+                <div class="keys-container">
+                    <span class="key">⇧</span>
+                    <span class="plus">+</span>
+                    <span class="key">⌘</span>
+                    <span class="plus">+</span>
+                    <span class="key">G</span>
+                </div>
+                <div class="description">Jump to folder by typing path in Finder</div>
+            </div>
+            
+            <!-- Copy File Path -->
+            <div class="shortcut-card">
+                <div class="shortcut-title">
+                    <span class="icon">📋</span>
+                    Copy File Path
+                </div>
+                <div class="keys-container">
+                    <span class="key">⌘</span>
+                    <span class="plus">+</span>
+                    <span class="key">⌥</span>
+                    <span class="plus">+</span>
+                    <span class="key">C</span>
+                </div>
+                <div class="description">Copy full file path to clipboard</div>
+                <div class="description" style="margin-top: 5px; font-size: 13px; color: #777;">Or: Right-click + hold ⌥ → "Copy as Pathname"</div>
+            </div>
+            
+            <!-- Quick Look -->
+            <div class="shortcut-card">
+                <div class="shortcut-title">
+                    <span class="icon">👁️</span>
+                    Quick Look
+                </div>
+                <div class="keys-container">
+                    <span class="key">Space</span>
+                </div>
+                <div class="description">Preview file without opening app</div>
+            </div>
+            
+            <!-- Screenshots -->
+            <div class="shortcut-card">
+                <div class="shortcut-title">
+                    <span class="icon">📸</span>
+                    Screenshots
+                </div>
+                <div class="keys-container">
+                    <span class="key">⇧</span>
+                    <span class="plus">+</span>
+                    <span class="key">⌘</span>
+                    <span class="plus">+</span>
+                    <span class="key">3</span>
+                </div>
+                <div class="description">Capture entire screen</div>
+                <div class="keys-container" style="margin-top: 8px;">
+                    <span class="key">⇧</span>
+                    <span class="plus">+</span>
+                    <span class="key">⌘</span>
+                    <span class="plus">+</span>
+                    <span class="key">4</span>
+                </div>
+                <div class="description">Capture selected area</div>
+            </div>
+            
+            <!-- Hide/Minimize -->
+            <div class="shortcut-card">
+                <div class="shortcut-title">
+                    <span class="icon">🪟</span>
+                    Hide / Minimize
+                </div>
+                <div class="keys-container">
+                    <span class="key">⌘</span>
+                    <span class="plus">+</span>
+                    <span class="key">H</span>
+                </div>
+                <div class="description">Hide current app's windows</div>
+                <div class="keys-container" style="margin-top: 8px;">
+                    <span class="key">⌘</span>
+                    <span class="plus">+</span>
+                    <span class="key">M</span>
+                </div>
+                <div class="description">Minimize window to Dock</div>
+            </div>
+            
+            <!-- Quit Apps -->
+            <div class="shortcut-card">
+                <div class="shortcut-title">
+                    <span class="icon">❌</span>
+                    Quit Apps
+                </div>
+                <div class="keys-container">
+                    <span class="key">⌘</span>
+                    <span class="plus">+</span>
+                    <span class="key">Q</span>
+                </div>
+                <div class="description">Quit current application</div>
+                <div class="keys-container" style="margin-top: 8px;">
+                    <span class="key">⌥</span>
+                    <span class="plus">+</span>
+                    <span class="key">⌘</span>
+                    <span class="plus">+</span>
+                    <span class="key">Esc</span>
+                </div>
+                <div class="description">Force quit unresponsive app</div>
+            </div>
+            
+            <!-- Lock Screen -->
+            <div class="shortcut-card">
+                <div class="shortcut-title">
+                    <span class="icon">🔒</span>
+                    Lock Screen
+                </div>
+                <div class="keys-container">
+                    <span class="key">⌃</span>
+                    <span class="plus">+</span>
+                    <span class="key">⌘</span>
+                    <span class="plus">+</span>
+                    <span class="key">Q</span>
+                </div>
+                <div class="description">Quickly lock your Mac (requires login)</div>
+            </div>
+            
+            <!-- Delete Files -->
+            <div class="shortcut-card">
+                <div class="shortcut-title">
+                    <span class="icon">🗑️</span>
+                    Delete Files
+                </div>
+                <div class="keys-container">
+                    <span class="key">⌘</span>
+                    <span class="plus">+</span>
+                    <span class="key">Delete</span>
+                </div>
+                <div class="description">Move selected items to Trash</div>
+            </div>
+        </div>
+        
+        <div class="keyboard-legend">
+            <div class="legend-item">
+                <span class="legend-key">⌘</span>
+                <span>Command</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-key">⌥</span>
+                <span>Option</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-key">⌃</span>
+                <span>Control</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-key">⇧</span>
+                <span>Shift</span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>The Island Private School of Limassol | Technical Leaders of the Future</p>
+        </div>
+    </div>
+</body>
+</html>
